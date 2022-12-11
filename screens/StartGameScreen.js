@@ -1,38 +1,41 @@
-import React from "react";
-import { View, TextInput, StyleSheet } from "react-native";
+import { TextInput, View, StyleSheet } from "react-native";
+
 import PrimaryButton from "../components/PrimaryButton";
 
-const StartGameScreen = () => {
+function StartGameScreen() {
   return (
     <View style={styles.inputContainer}>
       <TextInput
         style={styles.numberInput}
-        //  maxLength={2} මගින් ඉලක්කම් 2ක සංඛ්‍යවක් පමණක්  enter කරන්නට හැකි වන අයුරින් සීමා කර ඇත.
         maxLength={2}
-        // enter only number
         keyboardType="number-pad"
-        // ==off first lettar capital==
-        // autoCapitalize="none"
-        // autoCorrect={false}
+        autoCapitalize="none"
+        autoCorrect={false}
       />
-      <PrimaryButton> Reset</PrimaryButton>
-      <PrimaryButton> Confirm</PrimaryButton>
+      <View style={styles.buttonsContainer}>
+        <View style={styles.buttonContainer}>
+          <PrimaryButton>Reset</PrimaryButton>
+        </View>
+        <View style={styles.buttonContainer}>
+          <PrimaryButton>Confirm</PrimaryButton>
+        </View>
+      </View>
     </View>
   );
-};
+}
 
 export default StartGameScreen;
 
 const styles = StyleSheet.create({
   inputContainer: {
+    justifyContent: "center",
+    alignItems: "center",
     marginTop: 100,
     marginHorizontal: 24,
     padding: 16,
-    backgroundColor: "#4e0329",
+    backgroundColor: "#3b021f",
     borderRadius: 8,
-    // shadow for Android
     elevation: 4,
-    // shadow for IOS
     shadowColor: "black",
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 6,
@@ -48,5 +51,11 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     fontWeight: "bold",
     textAlign: "center",
+  },
+  buttonsContainer: {
+    flexDirection: "row",
+  },
+  buttonContainer: {
+    flex: 1,
   },
 });
