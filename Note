@@ -1,2 +1,6 @@
 ######### for set multiple color background #########
 npx expo install expo-linear-gradient
+
+########## for add font ###############
+npx expo install expo-font
+npm i expo-app-loading
