@@ -5,9 +5,16 @@ import PrimaryButton from "../components/PrimaryButton";
 const StartGameScreen = () => {
   return (
     <View style={styles.inputContainer}>
-      {/*  maxLength={2} මගින් ඉලක්කම් 2ක සංඛ්‍යවක් පමණක්  enter
-      කරන්නට හැකි වන අයුරින් සීමා කර ඇත..*/}
-      <TextInput style={styles.numberInput} maxLength={2} />
+      <TextInput
+        style={styles.numberInput}
+        //  maxLength={2} මගින් ඉලක්කම් 2ක සංඛ්‍යවක් පමණක්  enter කරන්නට හැකි වන අයුරින් සීමා කර ඇත.
+        maxLength={2}
+        // enter only number
+        keyboardType="number-pad"
+        // ==off first lettar capital==
+        // autoCapitalize="none"
+        // autoCorrect={false}
+      />
       <PrimaryButton> Reset</PrimaryButton>
       <PrimaryButton> Confirm</PrimaryButton>
     </View>
