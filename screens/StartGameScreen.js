@@ -5,7 +5,9 @@ import PrimaryButton from "../components/PrimaryButton";
 const StartGameScreen = () => {
   return (
     <View style={styles.inputContainer}>
-      <TextInput />
+      {/*  maxLength={2} මගින් ඉලක්කම් 2ක සංඛ්‍යවක් පමණක්  enter
+      කරන්නට හැකි වන අයුරින් සීමා කර ඇත..*/}
+      <TextInput style={styles.numberInput} maxLength={2} />
       <PrimaryButton> Reset</PrimaryButton>
       <PrimaryButton> Confirm</PrimaryButton>
     </View>
@@ -28,5 +30,16 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 6,
     shadowOpacity: 0.25,
+  },
+  numberInput: {
+    height: 50,
+    width: 50,
+    fontSize: 32,
+    borderBottomColor: "#ddb52f",
+    borderBottomWidth: 2,
+    color: "#ddb52f",
+    marginVertical: 8,
+    fontWeight: "bold",
+    textAlign: "center",
   },
 });
